@@ -1,6 +1,7 @@
 //normal functions can be hoisted
 console.log(add(1,2,3))// output 6
 
+//use of spread operator 
 function add(...nums){
     let ans=0;
     for(let i=0;i<nums.length;i++){
@@ -8,9 +9,12 @@ function add(...nums){
     }
     return ans;
 }
+// In  normal functions we can use arguments key word and not in arrow functions
 
 console.log(add(1,2,3,4,5,9))
 
+
+## Arrow functions
 
 //Arrow functins cannot be hoisted
 
@@ -25,3 +29,49 @@ const addV2=(a,b)=>a+b
 
 console.log(addV1(34,22));
 console.log(addV2(34,22));
+
+
+## using spread operator in arrow functions
+const sum = (a,b,c)=>{
+    return a+b+c;
+}
+
+console.log(sum(2,6,4,56,34)) // 12
+
+const sum1 = (...nums)=>{
+    let res=0;
+    for(let i=0;i<nums.length;i++){
+        res+=nums[i];
+    }
+    return res;
+}
+
+console.log(sum1(1,2,3,4,5,6,7))
+
+
+// object creation and this keyword
+
+//Normal function
+const obj1={
+  value: 23,
+  myFunction: function(){
+      console.log("value is "+this.value)
+  },
+};
+
+obj1.myFunction();
+
+
+//Arrow function
+const obj= {
+    value: 20,
+    myFunction:()=>{
+        console.log(this.value); //undefined
+        // here this keyword points to window object 
+    }   
+};
+
+obj.myFunction();
+
+
+
