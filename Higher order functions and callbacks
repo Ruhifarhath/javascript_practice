@@ -1,0 +1,26 @@
+Higher order fucntion : a function that takes a function as an argument
+
+
+//higher order fucntion example 
+
+function add (a,b,cb){
+    let res= a+b;
+    cb(res); //function call 
+}
+
+//function defintiom
+add(4,5,function(val){
+    console.log(val);
+})
+
+// can also be written as 
+
+function add (a,b,cb){
+    let res= a+b;
+    cb(res); //function call 
+}
+
+//function defintiom
+add(4,5,function(val){
+    console.log(val);
+})
