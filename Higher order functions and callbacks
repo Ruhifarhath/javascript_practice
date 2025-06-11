@@ -24,3 +24,33 @@ function add (a,b,cb){
 add(4,5,function(val){
     console.log(val);
 })
+
+
+
+// using Arrow functions as a callback function
+
+
+function sum(a,b,cb){
+     let ans=a+b;
+     cb(ans);
+}
+
+sum(3,5,(val)=>{
+    console.log(val) // 8
+})
+
+
+
+// HIgher order functions can also returnn a function
+
+function sum(a,b,cb){
+     let ans=a+b;
+     cb(ans);
+     
+     return ()=> console.log(ans);
+}
+
+let resFn=sum(3,5,()=>{});
+resFn();
+
+
