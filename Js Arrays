@@ -1,0 +1,30 @@
+// JS HAS HETEROGENOUS ARRAYS
+
+const people= ["hari","sam","john", "sultan"]
+console.log(people) // [ 'hari', 'sam', 'john', 'sultan' ]
+console.log(people.length) // 4
+console.log(people[2]="piyush") 
+console.log(people[2]="piyush") 
+
+//Even though the array is initialized with const, you can mutate the elements of the array but not the array itself , 
+
+people=['ruhi'] //TypeError: Assignment to constant variable.
+
+//OPERATORS
+1. PUSH
+people.push(45)
+people.push(true)
+people.push({name: "yoyo"}) //can also object 
+
+console.log(people) //[ 'hari', 'sam', 'piyush', 'sultan', '45', true, { name: 'tahira' } ]
+
+2. indexOf 
+
+console.log(people.indexOf("45"))  // -1 ( if such element not found )
+console.log(people.indexOf(45))  // 4
+
+console.log(people.pop()) // last element will be popped out
+people.reverse()
+console.log(people) //[ true, 45, 'sultan', 'piyush', 'sam', 'hari' ]
+
+
