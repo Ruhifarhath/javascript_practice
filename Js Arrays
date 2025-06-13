@@ -28,3 +28,11 @@ people.reverse()
 console.log(people) //[ true, 45, 'sultan', 'piyush', 'sam', 'hari' ]
 
 
+##HIGHER ORDER FUNCTIONS IN ARRAY 
+const arr= ["hi","I am ","an","array"]
+
+function print(num){
+    console.log(num)
+}
+
+arr.forEach(print);
