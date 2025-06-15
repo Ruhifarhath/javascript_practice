@@ -19,11 +19,12 @@ function add (a,b,cb){
     let res= a+b;
     cb(res); //function call 
 }
+function showVal{
+    console.log(val);
+}
 
 //function defintiom
-add(4,5,function(val){
-    console.log(val);
-})
+add(4,5,showVal);
 
 
 
