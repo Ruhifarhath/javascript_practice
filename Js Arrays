@@ -36,3 +36,12 @@ function print(num){
 }
 
 arr.forEach(print);
+
+const students = ["noni","rinki","pinku","kapil"]
+
+students.forEach((val) =>console.log(val+" sharma"))
+
+
+
+
+
